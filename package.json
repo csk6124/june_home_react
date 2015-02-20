@@ -7,7 +7,7 @@
     "watch": "watchify client/js/main.js -o dist/js/main.js -v",
     "browserify": "browserify client/js/main.js | uglifyjs > dist/js/main.js",
     "build": "npm run browserify ",
-    "start": "npm run watch & nodemon server.js"
+    "start": "npm run watch & nodemon server/server.js"
   },
   "dependencies": {
     "express": "~4.9.7",

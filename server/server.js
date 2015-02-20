@@ -2,6 +2,7 @@
 var express = require('express'),
   exphbs = require('express-handlebars'),
   http = require('http'),
+  path = require('path'),
   mongoose = require('mongoose');
 
 // Create an express instance and set a port variable
@@ -19,7 +20,9 @@ app.disable('etag');
 mongoose.connect('mongodb://localhost/react-tweets');
 
 // Set /public as our static content dir
-app.use("/", express.static(__dirname + "/dist/"));
+
+var staticPath = path.join(__dirname, '../', 'dist/');
+app.use("/", express.static(staticPath));
 
 // Fire this bitch up (start our server)
 var server = http.createServer(app).listen(port, function() {
