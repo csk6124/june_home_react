@@ -4,7 +4,7 @@ var React = require('react');
 var APP = 
 	React.createClass({
 		render: function() {
-			return <h1>Home First</h1>
+			return <h1>Home First 2</h1>
 		}
 	});
 
